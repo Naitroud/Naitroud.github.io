@@ -10,6 +10,9 @@
  let favorites=new Set();
  try{favorites=new Set(JSON.parse(localStorage.getItem('ugalaxy-favorites-v1')||'[]'));}catch{}
  const viewport=$('viewport'),world=$('world');
+ viewport.addEventListener('dragstart',e=>e.preventDefault());
+ viewport.addEventListener('selectstart',e=>e.preventDefault());
+ for(const image of viewport.querySelectorAll('img')){image.draggable=false;image.addEventListener('dragstart',e=>e.preventDefault());}
  const mobileMode=matchMedia('(max-width:700px), (max-width:950px) and (max-height:500px)');
  const isMobile=()=>mobileMode.matches;
  function dockState(){const nav=$('nav-toggle').getAttribute('aria-expanded')==='true',layers=!$('layers').hidden,dossier=!$('inspector').hidden;$('mobile-nav').setAttribute('aria-expanded',String(nav));$('mobile-layers').setAttribute('aria-expanded',String(layers));$('mobile-dossier').disabled=!selected;[['mobile-nav',nav],['mobile-layers',layers],['mobile-dossier',dossier]].forEach(([id,on])=>$(id).classList.toggle('active',on));}
