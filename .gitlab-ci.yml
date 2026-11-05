@@ -1,0 +1,21 @@
+default:
+  image: alpine:3.22
+
+stages:
+  - deploy
+
+deploy-universe:
+  stage: deploy
+  script:
+    - test -s public/index.html
+    - test -s public/styles.css
+    - test -s public/universe.css
+    - test -s public/app.js
+    - test -s public/assets/Umap2370v6.png
+    - test -s public/assets/influence.png
+  pages: true
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
