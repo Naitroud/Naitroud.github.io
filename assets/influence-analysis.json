@@ -1,5 +1,5 @@
 {
-  "source": "assets/Umap2370v6.png",
+  "source": "/assets/Umap2370v6.png",
   "source_sha256": "e70ef68d725e28ef3881f7505d722d948d36e61d570c12b280e7af942996013b",
   "size": [
     2560,
@@ -7,7 +7,7 @@
   ],
   "families": {
     "olive": {
-      "file": "assets/influence-olive.png",
+      "file": "/assets/influence-olive.png",
       "reference_rgb": [
         134,
         136,
@@ -95,7 +95,7 @@
       ]
     },
     "teal": {
-      "file": "assets/influence-teal.png",
+      "file": "/assets/influence-teal.png",
       "reference_rgb": [
         71,
         121,
@@ -183,7 +183,7 @@
       ]
     },
     "blue": {
-      "file": "assets/influence-blue.png",
+      "file": "/assets/influence-blue.png",
       "reference_rgb": [
         57,
         94,
@@ -271,7 +271,7 @@
       ]
     },
     "green": {
-      "file": "assets/influence-green.png",
+      "file": "/assets/influence-green.png",
       "reference_rgb": [
         73,
         124,
@@ -359,7 +359,7 @@
       ]
     },
     "gold": {
-      "file": "assets/influence-gold.png",
+      "file": "/assets/influence-gold.png",
       "reference_rgb": [
         160,
         120,
@@ -447,7 +447,7 @@
       ]
     },
     "deep_purple": {
-      "file": "assets/influence-deep_purple.png",
+      "file": "/assets/influence-deep_purple.png",
       "reference_rgb": [
         94,
         39,
@@ -535,7 +535,7 @@
       ]
     },
     "rust": {
-      "file": "assets/influence-rust.png",
+      "file": "/assets/influence-rust.png",
       "reference_rgb": [
         154,
         67,
@@ -623,7 +623,7 @@
       ]
     },
     "lavender": {
-      "file": "assets/influence-lavender.png",
+      "file": "/assets/influence-lavender.png",
       "reference_rgb": [
         134,
         116,
@@ -711,7 +711,7 @@
       ]
     },
     "north_violet": {
-      "file": "assets/influence-north_violet.png",
+      "file": "/assets/influence-north_violet.png",
       "reference_rgb": [
         82,
         86,
@@ -799,7 +799,7 @@
       ]
     },
     "slate": {
-      "file": "assets/influence-slate.png",
+      "file": "/assets/influence-slate.png",
       "reference_rgb": [
         98,
         112,
@@ -893,9 +893,9 @@
     "White labels/emblems, stars, dark outlines, black dotted lines and pale routes generally remain transparent; some tinted antialiasing can survive.",
     "Nebula changes fill RGB; mixed or weakly colored pixels can be omitted. Similar-colored nebula inside broad gates can cause false positives.",
     "Neutral northern silver and Earth are omitted; slate color group is not a faction identifier. No lore/name mapping is asserted.",
-    "Per-color assets group disconnected islands only by measured color; they never connect islands."
+    "Per-color /assets group disconnected islands only by measured color; they never connect islands."
   ],
-  "combined_file": " assets/influence.png",
+  "combined_file": " /assets/influence.png",
   "combined_alpha_extrema": [
     0,
     52
