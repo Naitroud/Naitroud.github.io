@@ -1,0 +1,56 @@
+/* v30: narrow cosmetic overrides; keep the existing sector scroll bodies. */
+#admin-dialog.sector-window > .standard-header {
+  margin: 0 !important;
+  padding-inline: 24px !important;
+}
+
+/* The heading is inset; anchor its decorative strip to the panel instead. */
+#layers > .layers-heading::before {
+  display: none !important;
+}
+#layers.panel::before {
+  content: "";
+  display: block !important;
+  position: absolute;
+  top: 0 !important;
+  left: auto !important;
+  right: 20px !important;
+  width: 42px;
+  height: 2px;
+  background: #dfc189;
+  border-radius: 0;
+}
+
+/* Match the existing upper divider; remove the brighter duplicate rail. */
+#faction-toggle {
+  border-bottom-color: var(--console-border, #273b4c) !important;
+}
+#faction-toggle::after {
+  display: none !important;
+}
+
+/* Cover the padded scrollport edge-to-edge, including its bottom depth. */
+#dossier-content {
+  --v30-dossier-inset: 24px;
+  --v30-dossier-bottom: 24px;
+}
+#dossier-content > #scroll-hint {
+  position: sticky;
+  bottom: calc(-1 * var(--v30-dossier-bottom));
+  z-index: 20;
+  margin-inline: calc(-1 * var(--v30-dossier-inset));
+  margin-bottom: calc(-1 * var(--v30-dossier-bottom));
+  padding: 10px var(--v30-dossier-inset) var(--v30-dossier-bottom);
+  min-height: 45px;
+  background: #0a131c;
+}
+
+@media (max-width: 700px), (max-width: 950px) and (max-height: 500px) {
+  #dossier-content {
+    --v30-dossier-inset: 18px;
+    --v30-dossier-bottom: 14px;
+  }
+  #admin-dialog.sector-window > .standard-header {
+    padding-inline: 18px !important;
+  }
+}
