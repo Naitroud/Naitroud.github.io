@@ -1,0 +1,2 @@
+'use strict';
+(()=>{const $=id=>document.getElementById(id);const help=$('territory-help-toggle');help.className='icon-btn';help.textContent='?';help.title='Справка редактора границ';help.setAttribute('aria-label',help.title);$('territory-tools').querySelector('header').insertBefore(help,$('territory-collapse'));for(const dt of $('help').querySelectorAll('dt'))if(dt.textContent==='E / У'){const key=document.createElement('kbd');key.textContent='E';dt.replaceChildren(key);dt.nextElementSibling.textContent='Редактировать досье выбранного объекта (У в русской раскладке)';}})();
