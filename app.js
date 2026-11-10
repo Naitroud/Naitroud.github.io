@@ -107,7 +107,7 @@
   $('detail-coordinates').textContent=`X ${String(s.x).padStart(4,'0')} / Y ${String(s.y).padStart(4,'0')}${item.isFleet?' · '+s.name.trim():''}`;
   $('detail-description').textContent=item.description||'Описание не задано в исходной карте.';$('description-panel').open=true;
   $('detail-fleets').replaceChildren();if(!item.isFleet)data.fleets.filter(f=>String(f.system)===String(item.id)).forEach(f=>{const b=text(node('button'),f.name.trim()+' ↗');b.onclick=()=>select(byId.get(f.id));$('detail-fleets').append(b);});
-  $('selection-status').textContent=item.name.trim();updateFavoriteButton();updateSelection();center(item);$('inspector').scrollTop=0;document.dispatchEvent(new CustomEvent('galaxy-selection',{detail:item}));
+  $('selection-status').textContent=item.name.trim();updateFavoriteButton();updateSelection();center(item);($('dossier-content')||$('inspector')).scrollTop=0;document.dispatchEvent(new CustomEvent('galaxy-selection',{detail:item}));
  }
  function closeInspector(){hideDossier();}
  $('close-inspector').onclick=closeInspector;$('focus-object').onclick=()=>selected&&center(selected);
@@ -124,7 +124,7 @@
  $('influence-map').addEventListener('error',()=>{$('influence-toggle').checked=false;$('influence-toggle').disabled=true;$('influence-map').classList.add('off');});
  new ResizeObserver(()=>{if(cameraMode==='system'&&selected)center(selected,false);else if(cameraMode==='universe')fit(false);else if(cameraMode==='galaxy')galaxyHome(false);else{cancelFlight();constrain();applyTransform();}}).observe(viewport);
  reducedMotion.addEventListener('change',()=>{if(reducedMotion.matches)cancelFlight();});
- function updateScrollHint(){const el=$('inspector');$('scroll-hint').hidden=el.hidden||el.classList.contains('folded')||el.scrollHeight<=el.clientHeight+40||el.scrollTop+el.clientHeight>=el.scrollHeight-38;}
+ function updateScrollHint(){const el=$('dossier-content')||$('inspector');$('scroll-hint').hidden=el.hidden||el.classList.contains('folded')||el.scrollHeight<=el.clientHeight+40||el.scrollTop+el.clientHeight>=el.scrollHeight-38;}
  $('inspector').addEventListener('scroll',updateScrollHint);$('description-panel').addEventListener('toggle',()=>requestAnimationFrame(updateScrollHint));
  new ResizeObserver(()=>requestAnimationFrame(updateScrollHint)).observe($('inspector'));
  renderMarkers();renderList();window.galaxyApp={getData:()=>JSON.parse(JSON.stringify(data)),getSelected:()=>selected,replaceData:refreshData,selectId:id=>{const i=byId.get(String(id));if(i)select(i);},hidePanels:()=>{setNav(false);setLayers(false);hideDossier();},mapPoint:(x,y)=>{const r=viewport.getBoundingClientRect();return {x:Math.round((x-r.left-tx)/scale-5.5),y:Math.round((y-r.top-ty)/scale-5.5)};},toast,setTerritories:t=>{data.territories=t;document.dispatchEvent(new Event('galaxy-data-changed'));}};if(isMobile()){setNav(false);setLayers(false);}dockState();galaxyHome(false);
