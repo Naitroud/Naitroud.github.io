@@ -1,0 +1,12 @@
+/* Map markers retain their own symbols, not the generic button hover surface. */
+/* Original faction-colored marker rings are retained. */
+#world .event-marker{background:transparent!important}
+#world :is(.system-marker,.event-marker,.fleet-marker):is(:hover,.selected){background:transparent!important;box-shadow:none!important;}
+/* Capital orbital decoration remains; no extra selection ring. */
+#world .system-marker.capital-marker::after{display:block!important;inset:3px!important;border:1px dashed #dfc189!important;box-shadow:none!important;opacity:.85!important}
+/* Faction rows highlight text only, preserving existing checked selection. */
+#layers :is(#faction-toggle,#faction-list button):not(:disabled):hover{color:#78dfea!important;background:transparent!important;box-shadow:none!important;border-color:transparent!important}
+#layers #faction-toggle:not(:disabled):hover{border-color:var(--console-border,#273b4c)!important}
+/* Cancel the old combined-editor negative header margin. */
+#object-dialog.sector-window>.dialog-head{margin:0!important;padding-inline:24px!important}
+@media(max-width:700px),(max-width:950px) and (max-height:500px){#object-dialog.sector-window>.dialog-head{padding-inline:18px!important}#world .system-marker.capital-marker::after{inset:10px!important}}
