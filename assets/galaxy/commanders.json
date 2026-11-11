@@ -1,0 +1,58 @@
+[
+  {
+    "id": "cmd-armada",
+    "name": "Сарен",
+    "factionGroup": "Унатари",
+    "personality": "aggressive",
+    "traits": [
+      "decisive_assault",
+      "vanguard_pressure",
+      "inspiring_leader",
+      "emergency_reentry"
+    ],
+    "description": "",
+    "portrait": null
+  },
+  {
+    "id": "cmd-neutral",
+    "name": "Мира",
+    "factionGroup": "Нейтраные",
+    "personality": "cautious",
+    "traits": [
+      "orderly_withdrawal",
+      "rear_fortification",
+      "cautious_recovery",
+      "rapid_evacuation"
+    ],
+    "description": "",
+    "portrait": null
+  },
+  {
+    "id": "cmd-alliance",
+    "name": "Элиан",
+    "factionGroup": "Альянс",
+    "personality": "balanced",
+    "traits": [
+      "seasoned_crew",
+      "layered_armor",
+      "vanguard_screen",
+      "inspiring_leader"
+    ],
+    "description": "",
+    "portrait": null
+  },
+  {
+    "id": "cmd-zetts",
+    "name": "Зерит",
+    "factionGroup": "Зетты",
+    "personality": "tactician",
+    "traits": [
+      "independent_captains",
+      "rear_raiders",
+      "protective_screen",
+      "decisive_assault"
+    ],
+    "description": "",
+    "portrait": null
+  }
+]

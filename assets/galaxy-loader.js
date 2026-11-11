@@ -1,0 +1,7 @@
+'use strict';
+(()=>{
+const node=document.getElementById('galaxy-data'),fallback=JSON.parse(node.textContent),root=new URL('../',document.currentScript.src),keys=['systems','events','fleets','groups','commanders','territories','meta'];
+window.GalDataReady=(async()=>{let data=fallback;try{const parts=await Promise.all(keys.map(async key=>{const response=await fetch(new URL('assets/galaxy/'+key+'.json',root),{cache:'no-store'});if(!response.ok)throw Error(key+': '+response.status);return response.json();}));const files=Object.fromEntries(keys.map((key,i)=>[key,parts[i]]));for(const key of keys.slice(0,5))if(!Array.isArray(files[key]))throw Error('Invalid '+key);if(!files.meta||typeof files.meta!=='object'||Array.isArray(files.meta))throw Error('Invalid metadata');data={...files.meta,...Object.fromEntries(keys.slice(0,6).map(key=>[key,files[key]]))};window.GalaxyDataSource='external';}catch(error){window.GalaxyDataSource='embedded';window.GalaxyDataLoadError=String(error);if(location.protocol!=='file:')console.warn('Galaxy JSON unavailable; using complete embedded fallback.',error);}
+node.textContent=JSON.stringify(data);window.GalaxyPublishedBase=JSON.parse(JSON.stringify(data));return data;})();
+window.GalDataReady.then(()=>{const script=document.createElement('script');script.src=new URL('assets/app.js',root).href;script.onerror=()=>console.error('Unable to load galaxy application bundle');document.body.append(script);});
+})();

@@ -1,5 +1,0 @@
-/* Center every interactive symbol on its original 11px pin center. */
-.system-marker{transform:translate(-50%,-50%) scale(var(--inverse-scale,1));transform-origin:center}.event-marker{transform:translate(-50%,-50%) scale(var(--inverse-scale,1));transform-origin:center}
-.fleet-marker{--fleet-shift:calc(var(--fleet-base,32px) + var(--fleet-rank,0) * (8px + var(--fleet-spread,1) * (var(--fleet-size,26px) - 2px)));transform:scale(var(--inverse-scale,1)) translate(var(--fleet-shift),calc(-.5 * var(--fleet-size,26px) + var(--fleet-rank,0) * (1 - var(--fleet-spread,1)) * 3px));transform-origin:0 0}
-.hide-events .event-attached{display:none!important}.fleet-dossier-model{color:var(--selected-color);stroke-width:1.2!important}.fleet-dossier-model path{stroke:var(--selected-color);fill:#1e455233}.fleet-dossier-model circle{opacity:.5}
-@media(max-width:700px),(max-width:950px) and (max-height:500px){.system-marker,.event-marker{transform:translate(-50%,-50%) scale(var(--inverse-scale,1))}.fleet-marker{transform:scale(var(--inverse-scale,1)) translate(var(--fleet-shift),calc(-.5 * var(--fleet-size,36px) + var(--fleet-rank,0) * (1 - var(--fleet-spread,1)) * 3px))}}

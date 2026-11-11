@@ -1,0 +1,290 @@
+[
+  {
+    "id": "f4-0",
+    "system": 4,
+    "name": "Великая Армада",
+    "description": "",
+    "count": 12,
+    "attackMin": 5,
+    "attackMax": 20,
+    "defenseMin": 5,
+    "defenseMax": 20,
+    "hp": 3,
+    "multiAttack": false,
+    "attacks": 1,
+    "offset": 18,
+    "faction": "Унатари",
+    "commanderId": "cmd-armada",
+    "commander": {
+      "id": "cmd-armada",
+      "name": "Сарен",
+      "factionGroup": "Унатари",
+      "personality": "aggressive",
+      "traits": [
+        "decisive_assault",
+        "vanguard_pressure",
+        "inspiring_leader",
+        "emergency_reentry"
+      ],
+      "description": "",
+      "portrait": null
+    },
+    "shipTypes": [
+      {
+        "id": "light",
+        "name": "Лёгкие корабли",
+        "count": 4,
+        "hp": 3,
+        "attackMin": 5,
+        "attackMax": 16,
+        "defenseMin": 3,
+        "defenseMax": 12,
+        "model": "small",
+        "multiAttack": true,
+        "attacks": 2
+      },
+      {
+        "id": "medium",
+        "name": "Средние корабли",
+        "count": 4,
+        "hp": 5,
+        "attackMin": 8,
+        "attackMax": 22,
+        "defenseMin": 6,
+        "defenseMax": 18,
+        "model": "medium",
+        "multiAttack": false,
+        "attacks": 1
+      },
+      {
+        "id": "heavy",
+        "name": "Тяжёлые корабли",
+        "count": 4,
+        "hp": 8,
+        "attackMin": 12,
+        "attackMax": 28,
+        "defenseMin": 10,
+        "defenseMax": 24,
+        "model": "large",
+        "multiAttack": false,
+        "attacks": 1
+      }
+    ]
+  },
+  {
+    "id": "f4-1",
+    "system": 4,
+    "name": "Нейтральный флот",
+    "description": "",
+    "count": 12,
+    "attackMin": 5,
+    "attackMax": 20,
+    "defenseMin": 5,
+    "defenseMax": 20,
+    "hp": 3,
+    "multiAttack": false,
+    "attacks": 1,
+    "offset": 36,
+    "faction": "Нейтраные",
+    "commanderId": "cmd-neutral",
+    "commander": {
+      "id": "cmd-neutral",
+      "name": "Мира",
+      "factionGroup": "Нейтраные",
+      "personality": "cautious",
+      "traits": [
+        "orderly_withdrawal",
+        "rear_fortification",
+        "cautious_recovery",
+        "rapid_evacuation"
+      ],
+      "description": "",
+      "portrait": null
+    },
+    "shipTypes": [
+      {
+        "id": "light",
+        "name": "Лёгкие корабли",
+        "count": 4,
+        "hp": 3,
+        "attackMin": 5,
+        "attackMax": 16,
+        "defenseMin": 3,
+        "defenseMax": 12,
+        "model": "small",
+        "multiAttack": true,
+        "attacks": 2
+      },
+      {
+        "id": "medium",
+        "name": "Средние корабли",
+        "count": 4,
+        "hp": 5,
+        "attackMin": 8,
+        "attackMax": 22,
+        "defenseMin": 6,
+        "defenseMax": 18,
+        "model": "medium",
+        "multiAttack": false,
+        "attacks": 1
+      },
+      {
+        "id": "heavy",
+        "name": "Тяжёлые корабли",
+        "count": 4,
+        "hp": 8,
+        "attackMin": 12,
+        "attackMax": 28,
+        "defenseMin": 10,
+        "defenseMax": 24,
+        "model": "large",
+        "multiAttack": false,
+        "attacks": 1
+      }
+    ]
+  },
+  {
+    "id": "f4-2",
+    "system": 4,
+    "name": "Флот Альянса",
+    "description": "",
+    "count": 12,
+    "attackMin": 5,
+    "attackMax": 20,
+    "defenseMin": 5,
+    "defenseMax": 20,
+    "hp": 3,
+    "multiAttack": false,
+    "attacks": 1,
+    "offset": 54,
+    "faction": "Альянс",
+    "commanderId": "cmd-alliance",
+    "commander": {
+      "id": "cmd-alliance",
+      "name": "Элиан",
+      "factionGroup": "Альянс",
+      "personality": "balanced",
+      "traits": [
+        "seasoned_crew",
+        "layered_armor",
+        "vanguard_screen",
+        "inspiring_leader"
+      ],
+      "description": "",
+      "portrait": null
+    },
+    "shipTypes": [
+      {
+        "id": "light",
+        "name": "Лёгкие корабли",
+        "count": 4,
+        "hp": 3,
+        "attackMin": 5,
+        "attackMax": 16,
+        "defenseMin": 3,
+        "defenseMax": 12,
+        "model": "small",
+        "multiAttack": true,
+        "attacks": 2
+      },
+      {
+        "id": "medium",
+        "name": "Средние корабли",
+        "count": 4,
+        "hp": 5,
+        "attackMin": 8,
+        "attackMax": 22,
+        "defenseMin": 6,
+        "defenseMax": 18,
+        "model": "medium",
+        "multiAttack": false,
+        "attacks": 1
+      },
+      {
+        "id": "heavy",
+        "name": "Тяжёлые корабли",
+        "count": 4,
+        "hp": 8,
+        "attackMin": 12,
+        "attackMax": 28,
+        "defenseMin": 10,
+        "defenseMax": 24,
+        "model": "large",
+        "multiAttack": false,
+        "attacks": 1
+      }
+    ]
+  },
+  {
+    "id": "f4-3",
+    "system": 4,
+    "name": "Флот Зеттов",
+    "description": "",
+    "count": 12,
+    "attackMin": 5,
+    "attackMax": 20,
+    "defenseMin": 5,
+    "defenseMax": 20,
+    "hp": 3,
+    "multiAttack": false,
+    "attacks": 1,
+    "offset": 72,
+    "faction": "Зетты",
+    "commanderId": "cmd-zetts",
+    "commander": {
+      "id": "cmd-zetts",
+      "name": "Зерит",
+      "factionGroup": "Зетты",
+      "personality": "tactician",
+      "traits": [
+        "independent_captains",
+        "rear_raiders",
+        "protective_screen",
+        "decisive_assault"
+      ],
+      "description": "",
+      "portrait": null
+    },
+    "shipTypes": [
+      {
+        "id": "light",
+        "name": "Лёгкие корабли",
+        "count": 4,
+        "hp": 3,
+        "attackMin": 5,
+        "attackMax": 16,
+        "defenseMin": 3,
+        "defenseMax": 12,
+        "model": "small",
+        "multiAttack": true,
+        "attacks": 2
+      },
+      {
+        "id": "medium",
+        "name": "Средние корабли",
+        "count": 4,
+        "hp": 5,
+        "attackMin": 8,
+        "attackMax": 22,
+        "defenseMin": 6,
+        "defenseMax": 18,
+        "model": "medium",
+        "multiAttack": false,
+        "attacks": 1
+      },
+      {
+        "id": "heavy",
+        "name": "Тяжёлые корабли",
+        "count": 4,
+        "hp": 8,
+        "attackMin": 12,
+        "attackMax": 28,
+        "defenseMin": 10,
+        "defenseMax": 24,
+        "model": "large",
+        "multiAttack": false,
+        "attacks": 1
+      }
+    ]
+  }
+]
