@@ -1,0 +1,48 @@
+name: Deploy Galaxy Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: galaxy-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Verify site files
+        run: |
+          test -s index.html
+          test -s assets/app.js
+          test -s assets/app.css
+          test -s assets/galaxy-loader.js
+          for file in systems events fleets groups commanders territories meta; do
+            test -s "assets/galaxy/$file.json"
+          done
+      - name: Prepare clean Pages artifact
+        run: |
+          mkdir -p _site
+          cp index.html _site/index.html
+          cp .nojekyll _site/.nojekyll
+          cp -R assets _site/assets
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
