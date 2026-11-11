@@ -1,5 +1,6 @@
 {
   "era": "638 тонг (2370 год) от Основания Галактической Ассамблеи",
   "vassalSetupVersion": 1,
-  "fleetSetupVersion": 1
+  "fleetSetupVersion": 1,
+  "fleetScaleVersion": 46
 }
