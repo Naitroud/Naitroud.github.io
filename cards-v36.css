@@ -1,0 +1,8 @@
+/* Equal tiles, sized by the longest current trait, not clipped fixed heights. */
+#registry-traits.registry-trait-grid{grid-auto-rows:1fr;align-items:stretch}
+#registry-traits .registry-trait-choice{display:grid!important;grid-template-columns:18px minmax(0,1fr);align-items:stretch;min-width:0;margin:0!important;height:100%}
+#registry-traits .registry-trait-choice>input{align-self:start;margin-top:14px}
+#registry-traits .commander-trait{height:100%;box-sizing:border-box;min-width:0;overflow-wrap:anywhere}
+.registry-trait-grid:not(#registry-traits){grid-auto-rows:1fr;align-items:stretch}
+.registry-trait-grid:not(#registry-traits)>.commander-trait{height:100%;box-sizing:border-box}
+#registry-traits .trait-scope,#registry-traits .trait-duration{color:#a5bbc9}
