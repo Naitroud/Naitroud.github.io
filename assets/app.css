@@ -758,3 +758,53 @@ select { font-family: inherit; font-size: inherit; }
 
 /* battle-event-v45.css */
 #battle-event-traits{border:1px solid #365064;background:#0b1723;padding:12px;margin:14px 0;border-radius:5px}#battle-event-traits h3{color:#dfc189;font-size:11px;letter-spacing:1px}#battle-event-traits label{display:grid;grid-template-columns:20px 1fr;gap:6px 10px;padding:10px 0;align-items:center;color:#d4e4ee;font-size:12px}#battle-event-traits label small{grid-column:2;line-height:1.7;color:#97afbf}#battle-event-traits input{accent-color:#dfc189}#battle-event-traits>small{font-size:10px;line-height:1.6;color:#859fac}
+
+/* help-v46.css */
+/* Identity stays in column two of the existing portrait/name/action grid. */
+#commander-registry-dialog .commander-card-head>h4{display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-width:0}
+#commander-registry-dialog .commander-card-head h4 .commander-level{display:block;position:static;max-width:100%;box-sizing:border-box;margin:0;padding:2px 5px;font-size:10px;line-height:1.4;letter-spacing:0;white-space:nowrap;flex:none}
+#registry-level,#commander-legacy-level{min-height:44px;box-sizing:border-box;font-size:16px}
+#registry-title{flex:1;min-width:0;overflow-wrap:anywhere}
+#registry-help-v46{margin-left:auto;flex:none}
+#registry-close{margin-left:0}
+.help-button-v46{flex:none;min-width:44px;min-height:44px}
+.help-button-v46[hidden]{display:none!important}
+.help-v46-dialog{width:min(960px,calc(100vw - 24px))!important;max-width:960px!important;height:fit-content!important;max-height:calc(100dvh - 24px)!important;padding:0;overflow:hidden;color:#d8e7ee;background:#0a131c;border:1px solid #355164;border-radius:8px}
+.help-v46-dialog[open]{display:flex!important;flex-direction:column}
+.help-v46-dialog::backdrop{background:#020811bb}
+.help-v46-dialog>.dialog-head{display:flex;align-items:center;gap:12px;flex:none;margin:0;padding:14px 18px;border-bottom:1px solid #355164}
+.help-v46-dialog>.dialog-head h2{font-size:14px;letter-spacing:.08em;margin:0;flex:1;min-width:0;overflow-wrap:anywhere}
+.help-v46-dialog>.dialog-head button{flex:none;min-width:44px;min-height:44px}
+.help-v46-dialog>.guide-body{min-height:0;flex:0 1 auto;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;padding:16px 18px}
+.help-v46-dialog .guide-intro h2{font-size:20px;margin:0 0 8px}
+.help-v46-dialog p,.help-v46-dialog li{font-size:13px;line-height:1.75;overflow-wrap:anywhere}
+.help-v46-dialog .guide-topic-content{min-width:0}
+.help-reference-v46{margin:12px 0;min-width:0}
+.help-reference-v46 h4{margin:0 0 8px;font-size:14px}
+.help-v46-dialog .guide-link{min-height:44px;margin:6px;white-space:normal}
+@media(max-width:400px){#commander-registry-dialog .commander-card-head{grid-template-columns:40px minmax(0,1fr) 44px 44px!important;gap:4px}#commander-registry-dialog .commander-card-head>.commander-portrait{width:40px;height:40px;min-width:40px}#commander-registry-dialog .commander-card-head h4 .commander-level{font-size:9px;padding:2px 3px}.help-v46-dialog>.dialog-head{padding:10px 12px;gap:8px}.help-v46-dialog>.guide-body{padding:12px}}
+
+/* nav-v46.css */
+/* Compact faction hierarchy, with fixed metadata slots at every width. */
+#object-list .nav-group-v46{margin:0 0 5px;min-width:0}
+#object-list .nav-group-v46 > summary,#object-list .nav-category-v46 > summary{display:grid!important;grid-template-columns:12px 7px minmax(0,1fr) 20px 32px;align-items:center;column-gap:7px;min-width:0;list-style:none;padding:9px 8px;position:relative;line-height:1.25}
+#object-list .nav-group-v46 summary::-webkit-details-marker{display:none}
+#object-list .nav-group-v46 summary::before,#object-list .nav-group-v46 summary::after{content:none!important}
+#object-list .nav-label-v46{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+#object-list .nav-group-v46 .group-total{width:32px!important;min-width:32px!important;max-width:32px;box-sizing:border-box;text-align:right;justify-self:end;margin:0!important;padding:0;font-variant-numeric:tabular-nums;white-space:nowrap}
+#object-list .nav-chevron-v46{display:block;font-size:17px;transition:transform .15s;transform-origin:center;text-align:center;color:#8eabb8}
+#object-list details[open] > summary > .nav-chevron-v46{transform:rotate(90deg)}
+#object-list .nav-badge-slot-v46,#object-list .nav-vassal-v46{width:20px;height:18px;display:grid;place-items:center;color:#bbad82}
+#object-list .nav-vassal-v46 svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+#object-list .nav-category-v46{margin:0 0 0 14px;border-left:1px solid #29414b;min-width:0}
+#object-list .nav-category-v46 > summary{font-size:11px;letter-spacing:.035em;color:#a9bcc4;padding-top:7px;padding-bottom:7px}
+#object-list .nav-category-v46 > summary .group-dot{opacity:.35}
+#object-list .nav-row-v46{display:grid!important;grid-template-columns:6px minmax(0,1fr) 12px;align-items:center;gap:8px;width:100%;min-width:0;padding:7px 9px!important;margin:0!important;min-height:32px;line-height:1.3;text-align:left}
+#object-list .nav-row-v46 .row-name{min-width:0;white-space:nowrap!important;overflow:hidden;text-overflow:ellipsis;line-height:1.3}
+#object-list .nav-row-v46 .row-star{font-size:10px}
+#object-list .nav-object-branch-v46{margin:0 0 0 8px;border-left:1px solid #233942;min-width:0}
+#object-list .nav-object-branch-v46 > summary{display:grid!important;grid-template-columns:12px 7px minmax(0,1fr) 20px 32px;align-items:center;column-gap:5px;min-width:0;list-style:none;padding:6px;font-size:11px;line-height:1.3}
+#object-list .nav-empty-v46{margin:2px 9px 7px;color:#728995;font-size:11px}
+.nav-target-v46{outline:2px solid #c4af78!important;outline-offset:3px;border-radius:6px}
+@media(max-width:700px){#object-list .nav-group-v46 > summary,#object-list .nav-category-v46 > summary{column-gap:6px;padding-right:6px;padding-left:6px}#object-list .nav-category-v46{margin-left:10px}#object-list .nav-row-v46{min-height:36px}}
+@media(prefers-reduced-motion:reduce){#object-list .nav-chevron-v46{transition:none}}
