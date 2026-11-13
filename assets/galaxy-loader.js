@@ -56,9 +56,47 @@
     badge.append(badgeDot, badgeLabel);
     badge.setAttribute('aria-live', 'polite');
     const badgeStyle = document.createElement('style');
-    badgeStyle.textContent = '.galaxy-source-badge{position:fixed;left:16px;bottom:54px;z-index:60;display:inline-flex;align-items:center;gap:8px;height:30px;padding:0 12px;background:rgba(10,19,28,.97);border:1px solid #273b4c;border-radius:4px;font:11px "SFMono-Regular",Consolas,monospace;letter-spacing:.4px;color:#bdcbd6;box-shadow:0 5px 20px rgba(0,0,0,.25);cursor:pointer;transition:color .16s,border-color .16s}.galaxy-source-badge:hover{color:#e4eef6;border-color:#527887}.galaxy-source-badge .dot{width:7px;height:7px;border-radius:50%;background:#5a6c7c;flex:none;transition:background .2s}.galaxy-source-badge[data-state="external"] .dot{background:#59d68f}.galaxy-source-badge[data-state="embedded"] .dot{background:#ffb66a}.galaxy-source-badge[data-state="draft"] .dot{background:#78dfea}@media (max-width:700px){.galaxy-source-badge{left:12px;bottom:58px}}';
-function badgeAppend(){if(!badgeStyle.isConnected)document.head.append(badgeStyle);if(document.body){if(!badge.isConnected)document.body.append(badge);}else document.addEventListener('DOMContentLoaded',badgeAppend,{once:true});}
-
+    badgeStyle.textContent = '.galaxy-source-badge{display:inline-flex;align-items:center;gap:7px;height:24px;padding:0 10px;background:rgba(10,19,28,.85);border:1px solid #273b4c;border-radius:4px;font:10px "SFMono-Regular",Consolas,monospace;letter-spacing:.4px;color:#bdcbd6;cursor:pointer;transition:color .16s,border-color .16s;vertical-align:middle}.galaxy-source-badge:hover{color:#e4eef6;border-color:#527887}.galaxy-source-badge .dot{width:7px;height:7px;border-radius:50%;background:#5a6c7c;flex:none;transition:background .2s}.galaxy-source-badge[data-state="external"] .dot{background:#59d68f}.galaxy-source-badge[data-state="embedded"] .dot{background:#ffb66a}.galaxy-source-badge[data-state="draft"] .dot{background:#78dfea}.galaxy-source-badge.fallback{position:fixed;right:16px;bottom:54px;z-index:60;height:30px;padding:0 12px;background:rgba(10,19,28,.97);box-shadow:0 5px 20px rgba(0,0,0,.25)}@media (max-width:700px){.galaxy-source-badge.fallback{right:12px;bottom:58px}}';
+    function badgeAppend() {
+        if (!badgeStyle.isConnected)
+            document.head.append(badgeStyle);
+        if (document.body)
+            embed();
+        else
+            document.addEventListener('DOMContentLoaded', embed, {
+                once: true
+            });
+    }
+    let brandEl = null,
+    tries = 0;
+    function findStatusBrand() {
+        const footer = document.querySelector('footer.bottom-bar');
+        if (!footer)
+            return null;
+        return [...footer.querySelectorAll('span')].find(el => el.querySelector('.status-dot')) || null;
+    }
+    function embed() {
+        if (brandEl && !brandEl.isConnected)
+            brandEl = null;
+        if (!brandEl) {
+            const brand = findStatusBrand();
+            if (brand) {
+                brandEl = brand;
+                brand.hidden = true;
+                badge.classList.remove('fallback');
+            }
+        }
+        if (brandEl) {
+            if (!badge.isConnected)
+                brandEl.after(badge);
+            return;
+        }
+        if (!badge.isConnected)
+            document.body.append(badge);
+        badge.classList.add('fallback');
+        if (tries++ < 60)
+            setTimeout(embed, 300);
+    }
     function activeDraftKey() {
         for (const key of draftKeys) {
             try {
