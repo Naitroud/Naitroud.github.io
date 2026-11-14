@@ -1,68 +1,86 @@
 [
-  {
-    "key": "Альянс",
-    "label": "Альянс Спасеня",
-    "color": "#69e4eb"
-  },
-  {
-    "key": "Унатари",
-    "label": "Королевство Унатари",
-    "color": "#65df98"
-  },
-  {
-    "key": "Можжи",
-    "label": "Прайды Можжи",
-    "color": "#fcb66a"
-  },
-  {
-    "key": "Катонцы",
-    "label": "Катонская Федерация",
-    "color": "#65c8ed"
-  },
-  {
-    "key": "Финисанты",
-    "label": "Империя Финисантов",
-    "color": "#acafff"
-  },
-  {
-    "key": "Мелиафаты",
-    "label": "Рой Мелиофатов",
-    "color": "#e4d87b"
-  },
-  {
-    "key": "Эфы",
-    "label": "Эфская Республика",
-    "color": "#c797e9"
-  },
-  {
-    "key": "Гэкхо",
-    "label": "Империя Гек'хо",
-    "color": "#ff8775"
-  },
-  {
-    "key": "Зетты",
-    "label": "Зетты",
-    "color": "#77adb1"
-  },
-  {
-    "key": "Ювианцы",
-    "label": "Ювианцы",
-    "color": "#d1e0e9"
-  },
-  {
-    "key": "Либерио",
-    "label": "Либерио",
-    "color": "#eb99c5"
-  },
-  {
-    "key": "Нейтраные",
-    "label": "Нейтраные",
-    "color": "#9cabb8"
-  },
-  {
-    "key": "Земляне",
-    "label": "Земляне",
-    "color": "#a5cfae",
-    "overlord": "Ювианцы"
-  }
-]
+    {
+      "key": "Альянс",
+      "label": "Альянс Спасеня",
+      "color": "#363ce7",
+      "overlord": null
+    },
+    {
+      "key": "Унатари",
+      "label": "Королевство Унатари",
+      "color": "#65df98",
+      "overlord": null
+    },
+    {
+      "key": "Можжи",
+      "label": "Прайды Можжи",
+      "color": "#fcb66a",
+      "overlord": null
+    },
+    {
+      "key": "Катонцы",
+      "label": "Катонская Федерация",
+      "color": "#65c8ed",
+      "overlord": null
+    },
+    {
+      "key": "Финисанты",
+      "label": "Империя Финисантов",
+      "color": "#7627ec",
+      "overlord": null
+    },
+    {
+      "key": "Мелиафаты",
+      "label": "Рой Мелиофатов",
+      "color": "#e4d87b",
+      "overlord": null
+    },
+    {
+      "key": "Эфы",
+      "label": "Эфская Республика",
+      "color": "#7e44a7",
+      "overlord": null
+    },
+    {
+      "key": "Гэкхо",
+      "label": "Империя Гек'хо",
+      "color": "#e14a33",
+      "overlord": null
+    },
+    {
+      "key": "Зетты",
+      "label": "Зетты",
+      "color": "#77adb1",
+      "overlord": null
+    },
+    {
+      "key": "Ювианцы",
+      "label": "Ювианцы",
+      "color": "#d1e0e9",
+      "overlord": null
+    },
+    {
+      "key": "Либерио",
+      "label": "Либерио",
+      "color": "#eb99c5",
+      "overlord": null
+    },
+    {
+      "key": "Нейтраные",
+      "label": "Нейтраные",
+      "color": "#9cabb8",
+      "overlord": null
+    },
+    {
+      "key": "Земляне",
+      "label": "Земляне",
+      "color": "#d1e0e9",
+      "overlord": "Ювианцы"
+    },
+    {
+      "key": "custom-g-363b6a7b-e566-4c2f-b061-b7f4bf529b63",
+      "label": "Кочевники",
+      "color": "#dac03e",
+      "overlord": null
+    }
+  
